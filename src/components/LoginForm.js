@@ -21,7 +21,7 @@ export const LoginForm = () => {
     try {
       const data = await axios({
         method: 'post',
-        url: process.env.REACT_APP_BASE_URL + '/auth/login',
+        url: `${process.env.REACT_APP_BASE_URL}/auth/login`,
         data: values
       });
       localStorage.setItem('wl_user_token', data.data.token);

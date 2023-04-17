@@ -21,7 +21,7 @@ export const SignUpForm = () => {
         try {
           const data = await axios({
             method: 'post',
-            url: 'http://localhost:5000/auth/signup',
+            url: `${process.env.REACT_APP_BASE_URL}/auth/signup`,
             data: values
           });
           console.log(data.data);
